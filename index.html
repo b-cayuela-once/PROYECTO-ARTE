@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artenostrum Chile | Galería de Arte</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body id="inicio">
+
+    <a href="https://www.instagram.com/artenostrumchile" target="_blank" class="palette-loader" id="palette">
+        <i class="fa-solid fa-palette"></i>
+    </a>
+
+    <div class="top-announcement">
+        <p>ACTUALIZACIÓN de nuestra galería de <strong>ARTE</strong> en — <span id="countdown">00h : 00m : 00s</span></p>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <img src="https://res.cloudinary.com/dfmdykczr/image/upload/f_auto,q_auto,w_400/LOGO_bupw8q" alt="Artenostrum Chile" class="main-logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#inicio">I N I C I O</a></li>
+                    <li><a href="#nosotros">N O S O T R O S</a></li>
+                    <li><a href="#obras">O B R A S</a></li>
+                    <li><a href="#contacto">C O N T A C T A N O S</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="artist-highlights">
+            <div class="carousel-track" id="artist-circles">
+                </div>
+        </section>
+
+        <section id="nosotros" class="about-section">
+            <div class="about-container">
+                <h2>NOSOTROS</h2>
+                <div class="about-content">
+                    <p>En <strong>Artenostrum Chile</strong>, nuestra misión es democratizar el acceso al arte de alta calidad. Nos especializamos en la curatoría y difusión de obras de artistas chilenos consagrados y talentos emergentes.</p>
+                    <p>Creemos que cada obra cuenta una historia única. Por ello, asesoramos a coleccionistas y amantes del arte para encontrar piezas exclusivas que trasciendan en el tiempo, garantizando autenticidad y excelencia en cada trazo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="intro-section" id="obras">
+            <h1>GALERÍA DE ARTE</h1>
+            <p>Dedicada a acercar el trabajo de artistas chilenos consagrados a un público amplio con <strong>Artenostrum Chile</strong>.</p>
+        </section>
+
+        <section class="filter-area">
+            <div class="filter-container">
+                <div class="search-input-wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchBar" placeholder="Buscar por artista u obra..." oninput="applyFilters()">
+                </div>
+                
+                <div class="filters-row">
+                    <div class="select-custom">
+                        <select id="artistFilter" onchange="applyFilters()">
+                            <option value="Todos">Todos los Artistas</option>
+                        </select>
+                    </div>
+                    <div class="select-custom">
+                        <select id="categoryFilter" onchange="applyFilters()">
+                            <option value="Todas">Todas las Categorías</option>
+                            <option value="Pintura">Pintura</option>
+                            <option value="Grabado">Grabado</option>
+                            <option value="Escultura">Escultura</option>
+                            <option value="Fotografía">Fotografía</option>
+                        </select>
+                    </div>
+                    <div class="select-custom">
+                        <select id="statusFilter" onchange="applyFilters()">
+                            <option value="Disponible" selected>Disponible</option>
+                            <option value="Vendido">Vendido</option>
+                            <option value="Todos">Todos los Estados</option>
+                        </select>
+                    </div>
+                    <div class="price-range">
+                        <input type="number" id="minPrice" placeholder="Mín $" oninput="applyFilters()">
+                        <span class="divider">-</span>
+                        <input type="number" id="maxPrice" placeholder="Máx $" oninput="applyFilters()">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-wrapper">
+            <div class="gallery-grid" id="main-gallery"></div>
+        </section>
+    </main>
+
+    <footer class="main-footer" id="contacto">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo-area">
+                    <img src="https://res.cloudinary.com/dfmdykczr/image/upload/f_auto,q_auto,w_400/LOGO_bupw8q" alt="Artenostrum Chile" class="main-logo">
+                </div>
+                <p>Exclusividad y cultura en cada trazo. Curadoría profesional para espacios únicos.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/artenostrumchile" target="_blank"><i class="fa-brands fa-instagram"></i> @artenostrumchile</a>
+                </div>
+            </div>
+
+            <div class="footer-nav">
+                <h4>MENÚ</h4>
+                <a href="#inicio">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#obras">Galería de Obras</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+
+            <div class="footer-contact">
+                <h4>CONTACTO DIRECTO</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Santiago, Chile</p>
+                <p><i class="fa-solid fa-envelope"></i> contacto@artenostrum.cl</p>
+                <a href="https://wa.me/56979083084" class="footer-wa-btn">
+                    <i class="fa-brands fa-whatsapp"></i> ASESORÍA PERSONALIZADA
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Artenostrum Chile | Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
