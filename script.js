@@ -101,6 +101,7 @@ const artworksData = [
 
 const allArtworks = artworksData.map(art => ({
     ...art,
+    id: i + 1,
     title: `Colección Artenostrum #${i + 1}`,
     images: art.imgs.map(name => `${CLD_BASE_URL}/v1/${name}`)
 }));
