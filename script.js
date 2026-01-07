@@ -144,7 +144,7 @@ function renderGallery(data) {
     }
 
     data.forEach(art => {
-        const waLink = `https://wa.me/56979083084?text=Hola, me interesa la obra de ${art.artist} de su catálogo online.`;
+        const waLink = `https://wa.me/56979083084?text=Hola, me interesa la obra N°${art.id} realizada por ${art.artist}`;
         const statusClass = art.status === "Vendido" ? "status-sold" : "status-available";
         
         const card = document.createElement('div');
